@@ -40,8 +40,10 @@
     resultItems.detach();
     shuffle(resultItems);
     jQ.each(resultItems, function(i,elt) {
-      parent.append(elt);
+      parent.prepend(elt);
     });
+    
+    jQ("#resultStats").append('<span style="border: 1px solid #999999">scrambled<span>');
   };
   
   addJQuery(main);
